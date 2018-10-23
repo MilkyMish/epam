@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Task02
+namespace Task03
 {
 	public static class InterfacesDemo
 	{
@@ -27,6 +27,7 @@ namespace Task02
 			{
 				Console.WriteLine(series.GetCurrent());
 				series.MoveNext();
+                
 			}
 		}
 	}
@@ -38,12 +39,13 @@ namespace Task02
 		void Reset();
 	}
 
-	public class ArithmeticalProgression : ISeries
+	public class ArithmeticalProgression : ISeries,IIndexable
 	{
 		double start, step;
 		int currentIndex;
+    
 
-		public ArithmeticalProgression(double start, double step)
+        public ArithmeticalProgression(double start, double step)
 		{
 			this.start = start;
 			this.step = step;
@@ -66,21 +68,41 @@ namespace Task02
 			currentIndex = 1;
 		}
 
-		/*public double this[int index]
+		public double this[int index]
 		{
 			get
 			{
 				return start + step * index;
 			}
-		}*/
-	}
+		}
+       public double GetElement(int index)
+        {
+            return start + step * index;
+        }
+    }
 
-	public class List : ISeries
-	{
+
+    public class List : ISeries, IIndexable
+    {
 		private double[] series;
 		private int currentIndex;
+        public double this[int index]
+        {
+            set
+            {
+                if (index >= series.Length)
+                {
+                    throw new ArgumentOutOfRangeException("Индексатор за пределами ");
+                }
+                series[index] = value;
+            }
+            get
+            {
+                return series[index];
+            }
+        }
 
-		public List(double[] series)
+        public List(double[] series)
 		{
 			this.series = series;
 			currentIndex = 0;
@@ -101,19 +123,27 @@ namespace Task02
 		{
 			currentIndex = 0;
 		}
+        public double GetElement(int index)
+        {
+            return series[index];
+        }
 
-		/*public double this[int index]
+        /*public double this[int index]
 		{
 			get { return series[index]; }
 		}*/
-	}
+    }
 
 	public interface IIndexable
 	{
-		double this[int index] { get; }
-	}
+        double this[int index] { get; }
+        double GetElement(int index);
 
-	interface IIndexableSeries : ISeries, IIndexable
-	{
-	}
+    }
+
+	//interface IIndexableSeries : ISeries, IIndexable
+	//{
+
+ //       double GetElement(int index);
+ //   }
 }
