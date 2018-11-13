@@ -10,8 +10,7 @@ namespace task2
     {
         static Message greetByUs;
         static MessageBye sayGoodbyeByUs;
-        static MessageDick messageDick;
-        delegate void MessageDick(string dick);
+
         delegate void Message(string name, DateTime date);
         delegate void MessageBye(string name);
 
@@ -33,7 +32,7 @@ namespace task2
                 }
                 greetByUs += new Message(person.Greet);
                 sayGoodbyeByUs += person.SayGoodbye;
-                messageDick += person.SayaboutDick;
+                
             }
         }
 
@@ -44,12 +43,12 @@ namespace task2
             {
                 greetByUs -= person.Greet;
                 sayGoodbyeByUs -= person.SayGoodbye;
-                messageDick -= person.SayaboutDick;
+              
                 Console.WriteLine("{0} has left", person.Name);
                 if (sayGoodbyeByUs != null)
                 {
                     sayGoodbyeByUs(person.Name);
-                    messageDick(person.Name);
+
                 }
             }
         }

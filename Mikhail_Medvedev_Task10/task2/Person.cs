@@ -44,10 +44,7 @@ namespace task2
             Console.WriteLine("Bye, {0}!', said {1}.", anotherPerson, Name);
         }
 
-        public void SayaboutDick(string anotherPerson)
-        {
-            Console.WriteLine("Holy Dick, {0}!!!', yelled {1}.", anotherPerson, Name);
-        }
+        
 
     }
 
