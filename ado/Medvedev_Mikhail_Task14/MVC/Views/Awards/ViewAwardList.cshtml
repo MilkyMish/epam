@@ -1,0 +1,36 @@
+﻿@using Entities;
+
+@model List<Awards>
+@{
+    ViewBag.Title = "ViewAwardList";
+}
+
+<h2>ViewAwardList</h2>
+
+
+<h2>Awards</h2>
+@Html.ActionLink("Add", "Add", "Award", new { }, new { @class = "btn btn-primary" })
+
+<table class="table table-bordered" style="margin-top: 50px;">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var award in Model)
+        {
+            <tr>
+                <td>@award.Title</td>
+                <td>@award.Description</td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Award", new { UserId = @award.Id }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Delete", "Delete", "Award", new { UserId = @award.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

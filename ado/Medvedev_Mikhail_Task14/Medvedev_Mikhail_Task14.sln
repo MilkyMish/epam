@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medvedev_Mikhail_Task14", "Medvedev_Mikhail_Task14\Medvedev_Mikhail_Task14.csproj", "{9305B70E-7481-4446-96DB-1A3D5C370244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation layer", "presentation layer", "{F0301210-162F-46A1-9ED9-5FC419759A74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business layer", "Business layer", "{BD7BB425-B2B8-40A6-AED4-92DE94CFB930}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{EC64D80C-D68A-4380-BA5E-9ECBC5A2BDF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_And_Awards_BL", "User_And_Awards_BL\User_And_Awards_BL.csproj", "{A05256A0-6946-4D13-AECF-B1B2889946FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{7E3E8BBF-EAE3-4443-A02F-B635DC1E18B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_And_Awards_DAL", "User_And_Awards_DAL\User_And_Awards_DAL.csproj", "{63F466C7-14DA-4CB2-BDE5-8245441B39D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User_And_Awards_PL", "User_And_Awards_PL\User_And_Awards_PL.csproj", "{4547D2BF-15BC-42CF-AA7B-69F079089212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{1E0C5DCF-D3CD-4696-B930-4BF7E9AF7D6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{6E5A96FD-3DF1-42C8-840C-9A5D526D7C73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9305B70E-7481-4446-96DB-1A3D5C370244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9305B70E-7481-4446-96DB-1A3D5C370244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9305B70E-7481-4446-96DB-1A3D5C370244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9305B70E-7481-4446-96DB-1A3D5C370244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05256A0-6946-4D13-AECF-B1B2889946FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05256A0-6946-4D13-AECF-B1B2889946FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05256A0-6946-4D13-AECF-B1B2889946FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05256A0-6946-4D13-AECF-B1B2889946FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F466C7-14DA-4CB2-BDE5-8245441B39D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F466C7-14DA-4CB2-BDE5-8245441B39D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F466C7-14DA-4CB2-BDE5-8245441B39D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F466C7-14DA-4CB2-BDE5-8245441B39D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4547D2BF-15BC-42CF-AA7B-69F079089212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4547D2BF-15BC-42CF-AA7B-69F079089212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4547D2BF-15BC-42CF-AA7B-69F079089212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4547D2BF-15BC-42CF-AA7B-69F079089212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E0C5DCF-D3CD-4696-B930-4BF7E9AF7D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E0C5DCF-D3CD-4696-B930-4BF7E9AF7D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E0C5DCF-D3CD-4696-B930-4BF7E9AF7D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E0C5DCF-D3CD-4696-B930-4BF7E9AF7D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E5A96FD-3DF1-42C8-840C-9A5D526D7C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E5A96FD-3DF1-42C8-840C-9A5D526D7C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E5A96FD-3DF1-42C8-840C-9A5D526D7C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E5A96FD-3DF1-42C8-840C-9A5D526D7C73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A05256A0-6946-4D13-AECF-B1B2889946FA} = {BD7BB425-B2B8-40A6-AED4-92DE94CFB930}
+		{63F466C7-14DA-4CB2-BDE5-8245441B39D4} = {EC64D80C-D68A-4380-BA5E-9ECBC5A2BDF5}
+		{4547D2BF-15BC-42CF-AA7B-69F079089212} = {F0301210-162F-46A1-9ED9-5FC419759A74}
+		{1E0C5DCF-D3CD-4696-B930-4BF7E9AF7D6A} = {7E3E8BBF-EAE3-4443-A02F-B635DC1E18B8}
+		{6E5A96FD-3DF1-42C8-840C-9A5D526D7C73} = {F0301210-162F-46A1-9ED9-5FC419759A74}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D61F1654-8B58-4A66-9F90-C6A4038FB826}
+	EndGlobalSection
+EndGlobal

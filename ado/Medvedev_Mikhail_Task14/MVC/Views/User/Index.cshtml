@@ -1,0 +1,56 @@
+﻿@using Entities;
+
+@model List<Users>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<h2>Users</h2>
+@Html.ActionLink("Add", "Add", "User", new { }, new { @class = "btn btn-primary" })
+
+<table class="table table-bordered" style="margin-top: 50px;">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Birthdate</th>
+            <th>Awards</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Surname</td>
+                <td>@user.Birthday.ToShortDateString()</td>
+                @if (user.Awards != null)
+                {
+                    string viewAwards = " ";
+                    foreach (var item in user.Awards)
+                    {
+                        //viewAwards = String.Join(",", item.Title);
+                        viewAwards = viewAwards + " " + item.Title;
+                        //viewAwards = viewAwards + item.Title;
+                    }
+                    <td>@viewAwards</td>
+                    // @viewAwards = null;
+                }
+                else
+                {
+                    <td>"-"</td>
+                }
+
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "User", new { UserId = @user.Id }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Delete", "Delete", "User", new { UserId = @user.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
